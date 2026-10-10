@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>دعوت‌نامه‌ای که رد کردنش ممکن نیست 😌</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Tahoma,Arial,sans-serif;background:radial-gradient(circle at top,#5b315f,#1d1526 55%,#0e0b14);color:#fff;min-height:100vh;padding:22px}
+.wrap{max-width:720px;margin:auto}
+.card{background:rgba(255,255,255,.09);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.16);border-radius:28px;padding:26px;box-shadow:0 25px 80px #0008}
+h1{font-size:30px;margin:0 0 8px}
+.sub{opacity:.78;line-height:1.8}
+.badge{display:inline-block;background:#ff6fae;color:#241323;padding:7px 12px;border-radius:999px;font-weight:bold;margin-bottom:12px}
+label{display:block;margin:18px 0 8px;font-weight:bold}
+input,select,textarea{width:100%;padding:14px;border:1px solid #ffffff25;border-radius:14px;background:#ffffff12;color:#fff;font-size:16px;outline:none}
+option{color:#111}
+textarea{min-height:100px;resize:vertical}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.options{display:flex;flex-wrap:wrap;gap:9px}
+.opt{cursor:pointer;border:1px solid #ffffff22;background:#ffffff0e;padding:11px 14px;border-radius:14px;transition:.2s}
+.opt:hover{transform:translateY(-2px);background:#ffffff18}
+.opt input{display:none}
+.opt:has(input:checked){background:#ff6fae;color:#241323;border-color:#ff9cc7;font-weight:bold}
+button{width:100%;margin-top:24px;padding:16px;border:0;border-radius:17px;background:linear-gradient(135deg,#ff6fae,#b879ff);color:#fff;font-size:18px;font-weight:bold;cursor:pointer;box-shadow:0 12px 30px #ff6fae33}
+button:disabled{opacity:.55;cursor:wait}
+.tiny{font-size:12px;opacity:.58;margin-top:12px;text-align:center}
+.success{display:none;text-align:center;padding:25px 5px}
+.success .emoji{font-size:55px}
+.success h2{font-size:28px}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#16121d;border:1px solid #ffffff22;padding:12px 18px;border-radius:14px;display:none}
+@media(max-width:600px){.grid{grid-template-columns:1fr}h1{font-size:25px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="card">
+<div id="formView">
+<span class="badge">⚠️ اطلاعیه کاملاً جدی</span>
+<h1>یک دعوت‌نامه‌ی کاملاً غیرقابل‌رد 😌</h1>
+<p class="sub">شما به یک قرار دعوت شده‌اید. لطفاً آرامش خود را حفظ کنید؛ گزینه‌ی «نه» به دلایل کاملاً نامعلوم در این فرم وجود ندارد. 😂</p>
+
+<form id="inviteForm">
+<label>📅 چه روزی قرار است قربانی... ببخشید، مهمان ما باشی؟</label>
+<input id="date" type="date" required>
+
+<label>⏰ چه ساعتی؟</label>
+<input id="time" type="time" required>
+
+<label>📍 محل قرار</label>
+<input id="place" type="text" placeholder="مثلاً کافه، پارک، یا «هرجا تو بگی»" required>
+
+<label>😌 میزان اشتیاق شما؟</label>
+<div class="options">
+<label class="opt"><input type="radio" name="mood" value="خیلی زیاد 😭" required> خیلی زیاد 😭</label>
+<label class="opt"><input type="radio" name="mood" value="زیاد 😌"> زیاد 😌</label>
+<label class="opt"><input type="radio" name="mood" value="دارم خودمو می‌زنم به بی‌تفاوتی"> دارم خودمو می‌زنم به بی‌تفاوتی</label>
+</div>
+
+<label>🎭 برای قرار چه استایلی انتخاب می‌کنی؟</label>
+<div class="options">
+<label class="opt"><input type="radio" name="style" value="مرتب و شیک" required> مرتب و شیک ✨</label>
+<label class="opt"><input type="radio" name="style" value="کژوال و راحت"> کژوال و راحت 😎</label>
+<label class="opt"><input type="radio" name="style" value="هرچی دم دستم بود"> هرچی دم دستم بود 😂</label>
+</div>
+
+<label>💬 اگر پیشنهادی برای قرار داری، اینجا بنویس</label>
+<textarea id="note" placeholder="مثلاً غذا، فیلم، جای خاص، یا هر چیزی که باید بدانیم..."></textarea>
+
+<label>🪪 و حالا مهم‌ترین سؤال... اسم شخص محترم؟</label>
+<input id="name" type="text" placeholder="نامت را بنویس، بقیه‌اش با ما 😌" required>
+
+<button id="submitBtn" type="submit">قبول کردم، بریم 😌💌</button>
+<div class="tiny">با زدن دکمه، اطلاعات انتخاب‌شده برای دعوت‌کننده ارسال می‌شود.</div>
+</form>
+</div>
+
+<div id="success" class="success">
+<div class="emoji">💌🥳</div>
+<h2>ثبت شد!</h2>
+<p>تبریک می‌گویم؛ شما با موفقیت وارد این قرار شدید و سیستم هم دیگر راه برگشتی برایتان باقی نگذاشت. 😂</p>
+<p id="summary"></p>
+</div>
+</div>
+</div>
+<div id="toast" class="toast"></div>
+
+<script>
+// بعد از ساخت Google Apps Script، آدرس Web App را اینجا بگذار:
+const SCRIPT_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+
+const form = document.getElementById("inviteForm");
+const btn = document.getElementById("submitBtn");
+
+function getRadio(name){
+  return document.querySelector(`input[name="${name}"]:checked`)?.value || "";
+}
+function toast(msg){
+  const t=document.getElementById("toast"); t.textContent=msg; t.style.display="block";
+  setTimeout(()=>t.style.display="none",2800);
+}
+form.addEventListener("submit", async (e)=>{
+  e.preventDefault();
+
+  const data = {
+    name: document.getElementById("name").value.trim(),
+    date: document.getElementById("date").value,
+    time: document.getElementById("time").value,
+    place: document.getElementById("place").value.trim(),
+    mood: getRadio("mood"),
+    style: getRadio("style"),
+    note: document.getElementById("note").value.trim(),
+    submittedAt: new Date().toISOString()
+  };
+
+  if(!data.name || !data.date || !data.time || !data.place || !data.mood || !data.style){
+    toast("همه قسمت‌های اصلی رو پر کن 😌");
+    return;
+  }
+
+  btn.disabled=true;
+  btn.textContent="داریم ثبتش می‌کنیم... 👀";
+
+  try{
+    if(SCRIPT_URL.includes("PASTE_YOUR")){
+      // حالت دمو: فرم بدون اتصال هم کار می‌کند.
+      localStorage.setItem("inviteResponse", JSON.stringify(data));
+      showSuccess(data);
+      return;
+    }
+
+    await fetch(SCRIPT_URL,{
+      method:"POST",
+      mode:"no-cors",
+      headers:{"Content-Type":"text/plain;charset=utf-8"},
+      body:JSON.stringify(data)
+    });
+
+    showSuccess(data);
+  }catch(err){
+    console.error(err);
+    toast("ارسال نشد؛ دوباره امتحان کن.");
+  }finally{
+    btn.disabled=false;
+    btn.textContent="قبول کردم، بریم 😌💌";
+  }
+});
+
+function showSuccess(data){
+  document.getElementById("formView").style.display="none";
+  document.getElementById("success").style.display="block";
+  document.getElementById("summary").textContent =
+    `${data.name}، قرار شما برای ${data.date} ساعت ${data.time} در «${data.place}» ثبت شد.`;
+}
+</script>
+</body>
+</html>
